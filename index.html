@@ -8,13 +8,18 @@
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+        <h2>Coundowm Timer</h2>
+
         <div id="inputDiv" class="input-display">
             <div class="input-dis-ds">
                 <select id="inputHour">
-                    <option aria-readonly="true">00</option>
+                    <option>00</option>
                     <option value="1">01</option>
                     <option value="2">02</option>
                     <option value="3">03</option>
@@ -44,7 +49,7 @@
 
             <div class="input-dis-ds">
                 <select id="inputMinutes">
-                    <option aria-readonly="true">00</option>
+                    <option>00</option>
                     <option value="1">01</option>
                     <option value="2">02</option>
                     <option value="3">03</option>
@@ -111,7 +116,7 @@
 
             <div class="input-dis-ds">
                 <select id="inputSeconds">
-                    <option aria-readonly="true">00</option>
+                    <option>00</option>
                     <option value="1">01</option>
                     <option value="2">02</option>
                     <option value="3">03</option>
@@ -186,7 +191,7 @@
         </div>
 
         <div class="btn">
-            <div class="btn-fun" onclick="clk()" id="btnStart"><i class="ri-play-line"></i></div>
+            <div class="btn-fun" onclick="startTimer()" id="btnStart"><i class="ri-play-line"></i></div>
             <div class="btn-fun pause" onclick="stopTimer()" id="btnStop" ><i class="ri-pause-line"></i></div>
             <div class="btn-fun reset" onclick="resetTimer()" id="btnReset"><i class="ri-restart-line"></i></div>
         </div>

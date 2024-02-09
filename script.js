@@ -30,7 +30,7 @@ function renderDisplay(){
 }
 
 
-function clk(){
+function startTimer(){
         endText.style.display = "block";
     if (remainingHours === 0 && remainingminutes === 0 && remainingseconds === 0){
         hours = parseInt(inputHour.value);

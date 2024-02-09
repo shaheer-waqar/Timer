@@ -31,8 +31,7 @@ function renderDisplay(){
 
 
 function clk(){
-
-
+        endText.style.display = "block";
     if (remainingHours === 0 && remainingminutes === 0 && remainingseconds === 0){
         hours = parseInt(inputHour.value);
         minutes = parseInt(inputMinutes.value);
@@ -43,9 +42,13 @@ function clk(){
         seconds = remainingseconds; 
     }
 
-   
-    
+    if (hours === 0  && minutes === 0 && seconds ===0){
+        endText.style.display = "block";
+        endText.innerHTML = "Please select a valid value"
+        return;
+    }
 
+    endText.style.display = "none";
     inputDiv.style.display = "none";
     btnStop.style.display = "flex";
     btnStart.style.display = "none";
@@ -55,6 +58,9 @@ function clk(){
         if (hours === 0 && minutes === 0 && seconds === 0){
             stopTimer();
             endText.style.display = "block"
+            endText.innerHTML = "Your Coundown timer is completed"
+            btnStop.style.display = "none"
+            btnStart.style.display = "none"
         }else{
             if(seconds > 0){
                 seconds--;
@@ -72,10 +78,7 @@ function clk(){
             }
         }
         renderDisplay();
-
-    },1000)
-
-    
+    },1000)   
 }
 
 function stopTimer(){
@@ -106,6 +109,4 @@ function resetTimer(){
     btnStop.style.display = "none";
     btnReset.style.display = "none";
     endText.style.display = "none"
-
-
 }

@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-}
+    font-family: 'Poppins', sans-serif;}
 body {
     background-image: url(./assets/back.jpg);
     background-size: cover;
@@ -18,27 +17,32 @@ body {
     margin: 100px auto;
     align-items: center;
     box-shadow: 2px 2px 6px;
-    gap: 20px;
-    justify-content: center;
+    gap: 15px;
     backdrop-filter: blur(10px);
     background: transparent;
     border-radius: 20px;
+}
+h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 700;
 }
 .input-display{
     display: flex;
     gap: 5px;
 }
 .input-dis-ds{
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: black;
-    gap: 5px;
+    gap: 3px;
     font-size: 18px;
     font-weight: 700;
 }
-.container select {
+.input-dis-ds select {
     width: 100px;
     height: 40px;
     border-radius: 10px;
@@ -66,12 +70,18 @@ body {
     height: 60px;
     background-color: black;
     color: white;
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: 200;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 5px;
+    transform: .5;
+}
+.btn-fun:hover{
+    background-color: rgba(255, 255, 255, 0.205);
+    color: black;
 }
 .pause {
     display: none;
@@ -80,15 +90,12 @@ body {
     display: none;
 }
 
-/* #inputDiv {
-    display: none;
-} */
-
 p {
     font-size: 20px;
     font-weight: 700;
     display: none;
     color: white;
+    text-align: center;
 }
 
 @media (max-width: 730px ){
